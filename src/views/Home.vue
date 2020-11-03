@@ -1,30 +1,32 @@
 <template>
-  <div class="home-container">
-    <div class="h-container">
+  <div class="flex home-container">
+    <div class="flex h-container">
       <div class="map">map</div>
       <div class="w-container">
-        <weather-card class="w-card" status="Hottest" :weather="weather" />
-        <weather-card class="w-card" status="Coldest" :weather="weather" />
-        <weather-card class="w-card" status="Wettest" :weather="weather" />
-        <weather-card status="Windiest" :weather="weather" />
+        <rank-list :country="country" />
       </div>
     </div>
+    <detail-card />
+    <weather-details />
   </div>
 </template>
 
 <script>
 import Vue from "vue";
-import WeatherCard from "@/components/WeatherCard.vue";
+import RankList from "@/components/RankList.vue";
+import WeatherDetails from "@/components/WeatherDetails.vue";
+import DetailCard from "@/components/DetailCard.vue";
 
 export default Vue.extend({
   components: {
-    WeatherCard,
+    RankList,
+    WeatherDetails,
+    DetailCard,
   },
   data() {
     return {
-      status: "Hottest",
-      weather: {
-        country: "Thailand",
+      country: {
+        name: "Thailand",
         temp: 30.5,
       },
     };
@@ -33,19 +35,19 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.w-card {
-  margin-bottom: 2rem;
+.flex {
+  display: flex;
 }
 
 .home-container {
   margin: 3rem;
-  display: flex;
+  flex-direction: column;
 }
 
 .h-container {
-  display: flex;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 .w-container {
