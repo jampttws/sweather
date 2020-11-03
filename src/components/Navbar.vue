@@ -1,6 +1,6 @@
 <template>
   <div class="nav h-5">
-    <div class="head">sweather</div>
+    <div class="flex head">sweather</div>
   </div>
 </template>
 
@@ -13,13 +13,16 @@
   height: 5rem;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .head {
   color: white;
   width: 15%;
   height: 100%;
   font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>
