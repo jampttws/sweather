@@ -1,7 +1,9 @@
 <template>
   <div class="home-container">
     <div class="h-container">
-      <div class="map">map</div>
+      <div class="map">
+        <WorldWeather></WorldWeather>
+      </div>
       <div class="w-container">
         <weather-card class="w-card" status="Hottest" :weather="weather" />
         <weather-card class="w-card" status="Coldest" :weather="weather" />
@@ -15,10 +17,12 @@
 <script>
 import Vue from "vue";
 import WeatherCard from "@/components/WeatherCard.vue";
+import WorldWeather from "@/components/World-weather.vue";
 
 export default Vue.extend({
   components: {
     WeatherCard,
+    WorldWeather,
   },
   data() {
     return {
@@ -56,6 +60,5 @@ export default Vue.extend({
 .map {
   height: 30rem;
   width: 72%;
-  background-color: teal;
 }
 </style>
