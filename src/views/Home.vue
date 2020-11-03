@@ -1,7 +1,9 @@
 <template>
   <div class="flex home-container">
     <div class="flex h-container">
-      <div class="map">map</div>
+      <div class="map">
+      <WorldWeather></WorldWeather>
+      </div>
       <div class="w-container">
         <rank-list :country="country" />
       </div>
@@ -13,15 +15,20 @@
 
 <script>
 import Vue from "vue";
+
 import RankList from "@/components/RankList.vue";
 import WeatherDetails from "@/components/WeatherDetails.vue";
 import DetailCard from "@/components/DetailCard.vue";
+import WeatherCard from "@/components/WeatherCard.vue";
+import WorldWeather from "@/components/World-weather.vue";
 
 export default Vue.extend({
   components: {
     RankList,
     WeatherDetails,
     DetailCard,
+    WeatherCard,
+    WorldWeather,
   },
   data() {
     return {
@@ -58,6 +65,5 @@ export default Vue.extend({
 .map {
   height: 30rem;
   width: 72%;
-  background-color: teal;
 }
 </style>
