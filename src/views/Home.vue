@@ -2,7 +2,7 @@
   <div class="flex home-container">
     <div class="flex h-container">
       <div class="map">
-      <WorldWeather></WorldWeather>
+        <WorldWeather></WorldWeather>
       </div>
       <div class="w-container">
         <rank-list :country="country" />
@@ -19,7 +19,6 @@ import Vue from "vue";
 import RankList from "@/components/RankList.vue";
 import WeatherDetails from "@/components/WeatherDetails.vue";
 import DetailCard from "@/components/DetailCard.vue";
-import WeatherCard from "@/components/WeatherCard.vue";
 import WorldWeather from "@/components/World-weather.vue";
 
 export default Vue.extend({
@@ -27,7 +26,6 @@ export default Vue.extend({
     RankList,
     WeatherDetails,
     DetailCard,
-    WeatherCard,
     WorldWeather,
   },
   data() {
