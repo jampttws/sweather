@@ -9,7 +9,7 @@
       </div>
     </div>
     <search-box />
-    <!-- <ThailandMap></ThailandMap> -->
+    <mapCard />
   </div>
 </template>
 
@@ -19,6 +19,7 @@ import Vue from "vue";
 import RankList from "@/components/RankList.vue";
 import AsiaWeather from "@/components/Asia-weather.vue";
 import SearchBox from "@/components/SearchBox.vue";
+import mapCard from "@/components/mapCard.vue";
 // import IndonesiaMap from "@/components/IndonesiaMap.vue";
 // import SouthKoreaMap from "@/components/SouthKoreaMap.vue";
 // import LaosMap from "@/components/LaosMap.vue";
@@ -35,6 +36,9 @@ export default Vue.extend({
     // SouthKoreaMap,
     // IndonesiaMap,
     // ThailandMap,
+    // ChinaMap,
+    // LaosMap,
+    mapCard,
   },
   data() {
     return {
