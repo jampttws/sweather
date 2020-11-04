@@ -4,11 +4,11 @@
       <div class="map">
         <WorldWeather></WorldWeather>
       </div>
-      <div class="w-container">
+      <div class="flex w-container">
         <rank-list :country="country" />
       </div>
     </div>
-    <weather-details />
+    <search-box />
   </div>
 </template>
 
@@ -16,14 +16,14 @@
 import Vue from "vue";
 
 import RankList from "@/components/RankList.vue";
-import WeatherDetails from "@/components/WeatherDetails.vue";
 import WorldWeather from "@/components/World-weather.vue";
+import SearchBox from "@/components/SearchBox.vue";
 
 export default Vue.extend({
   components: {
     RankList,
-    WeatherDetails,
     WorldWeather,
+    SearchBox,
   },
   data() {
     return {
@@ -53,12 +53,13 @@ export default Vue.extend({
 }
 
 .w-container {
-  width: 20%;
-  margin-left: 3rem;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .map {
-  /* height: 30rem; */
-  width: 72%;
+  width: 70%;
 }
 </style>
