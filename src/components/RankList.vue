@@ -1,43 +1,62 @@
 <template>
   <div class="list-container">
-    <weather-card class="mb-2rem" status="Hottest" :country="country" />
-    <weather-card class="mb-2rem" status="Coldest" :country="country" />
-    <weather-card class="mb-2rem" status="Wettest" :country="country" />
-    <weather-card status="Windiest" :country="country" />
+    <!-- <weather-card
+      class="mb-2rem"
+      status="Hottest"
+      :country="this.getHottest[0]"
+    />
+    <weather-card
+      class="mb-2rem"
+      status="Coldest"
+      :country="this.getColdest[0]"
+    />
+    <weather-card
+      class="mb-2rem"
+      status="Wettest"
+      :country="this.getWettest[0]"
+    />
+    <weather-card status="Windiest" :country="this.getWindiest[0]" /> -->
+    <weather-card class="mb-2rem" status="Hottest" :country="hottest" />
+    <weather-card class="mb-2rem" status="Coldest" :country="coldest" />
+    <weather-card class="mb-2rem" status="Wettest" :country="wettest" />
+    <weather-card status="Windiest" :country="windiest" />
   </div>
 </template>
 
 <script>
 import Vue from "vue";
 import WeatherCard from "@/components/WeatherCard.vue";
-import { getWeather } from "@/api/weather.js";
+import { mapState, mapGetters } from "vuex";
 
 export default Vue.extend({
+  computed: {
+    ...mapState({
+      countryList: (state) => state.countryList,
+    }),
+    ...mapGetters(["getHottest", "getColdest", "getWettest", "getWindiest"]),
+  },
   components: {
     WeatherCard,
   },
-  props: {
-    country: Object,
-  },
   data() {
     return {
-      thai: {},
-      japan: {},
-      laos: {},
-      china: {},
-      korea: {},
-      indonesia: {},
+      hottest: {
+        name: "Thailand",
+        temp: 31,
+      },
+      coldest: {
+        name: "Russia",
+        temp: -20,
+      },
+      wettest: {
+        name: "Indonesia",
+        temp: 30,
+      },
+      windiest: {
+        name: "South Korea",
+        temp: 16,
+      },
     };
-  },
-  methods: {
-    async callWeather() {
-      this.th = await getWeather("Thailand");
-      this.jp = await getWeather("Japan");
-      this.ls = await getWeather("Laos");
-      this.ch = await getWeather("China");
-      this.kr = await getWeather("SouthKorea");
-      this.id = await getWeather("Indonesia");
-    },
   },
 });
 </script>

@@ -9,7 +9,7 @@
       </div>
     </div>
     <search-box />
-    <ThailandMap></ThailandMap>
+    <!-- <ThailandMap></ThailandMap> -->
   </div>
 </template>
 
@@ -24,7 +24,7 @@ import SearchBox from "@/components/SearchBox.vue";
 // import LaosMap from "@/components/LaosMap.vue";
 // import ChinaMap from "@/components/ChinaMap.vue";
 // import JapanMap from "@/components/JapanMap.vue";
-import ThailandMap from "@/components/ThailandMap.vue";
+// import ThailandMap from "@/components/ThailandMap.vue";
 
 export default Vue.extend({
   components: {
@@ -34,7 +34,7 @@ export default Vue.extend({
     // JapanMap,
     // SouthKoreaMap,
     // IndonesiaMap,
-    ThailandMap,
+    // ThailandMap,
   },
   data() {
     return {

@@ -54,6 +54,6 @@ export default Vue.extend({
 .card {
   flex-direction: row;
   padding: 15px;
-  height: 12rem;
+  height: 12.2rem;
 }
 </style>
