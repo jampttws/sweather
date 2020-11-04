@@ -2,14 +2,14 @@
   <div class="flex home-container">
     <div class="flex h-container">
       <div class="map">
-        <WorldWeather></WorldWeather>
+        <AsiaWeather></AsiaWeather>
       </div>
-      <div class="w-container">
+      <div class="flex w-container">
         <rank-list :country="country" />
       </div>
     </div>
-    <detail-card />
-    <weather-details />
+    <search-box />
+    <ThailandMap></ThailandMap>
   </div>
 </template>
 
@@ -17,16 +17,24 @@
 import Vue from "vue";
 
 import RankList from "@/components/RankList.vue";
-import WeatherDetails from "@/components/WeatherDetails.vue";
-import DetailCard from "@/components/DetailCard.vue";
-import WorldWeather from "@/components/World-weather.vue";
+import AsiaWeather from "@/components/Asia-weather.vue";
+import SearchBox from "@/components/SearchBox.vue";
+// import IndonesiaMap from "@/components/IndonesiaMap.vue";
+// import SouthKoreaMap from "@/components/SouthKoreaMap.vue";
+// import LaosMap from "@/components/LaosMap.vue";
+// import ChinaMap from "@/components/ChinaMap.vue";
+// import JapanMap from "@/components/JapanMap.vue";
+import ThailandMap from "@/components/ThailandMap.vue";
 
 export default Vue.extend({
   components: {
     RankList,
-    WeatherDetails,
-    DetailCard,
-    WorldWeather,
+    AsiaWeather,
+    SearchBox,
+    // JapanMap,
+    // SouthKoreaMap,
+    // IndonesiaMap,
+    ThailandMap,
   },
   data() {
     return {
@@ -56,12 +64,13 @@ export default Vue.extend({
 }
 
 .w-container {
-  width: 20%;
-  margin-left: 3rem;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .map {
-  height: 30rem;
-  width: 72%;
+  width: 70%;
 }
 </style>

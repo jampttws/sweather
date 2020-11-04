@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-100">
     <weather-card class="mb-2rem" status="Hottest" :country="country" />
     <weather-card class="mb-2rem" status="Coldest" :country="country" />
     <weather-card class="mb-2rem" status="Wettest" :country="country" />
@@ -22,6 +22,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.w-100 {
+  width: 100%;
+}
 .mb-2rem {
   margin-bottom: 2rem;
 }

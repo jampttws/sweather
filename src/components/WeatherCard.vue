@@ -26,7 +26,7 @@ export default Vue.extend({
 
 .card {
   padding: 10px;
-  width: 20rem;
+  width: 80%;
   height: 6rem;
   flex-direction: column;
 }
