@@ -2,7 +2,6 @@
   <div id="app">
     <div id="chart-container">
       <fusioncharts
-        class="h-70"
         :type="type"
         :width="width"
         :height="height"
@@ -364,9 +363,3 @@ export default {
   methods: {},
 };
 </script>
-
-<style scoped>
-.h-70 {
-  height: 70%;
-}
-</style>
