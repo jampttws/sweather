@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>Hello</h1>
     <div id="chart-container">
       <fusioncharts
         :type="type"

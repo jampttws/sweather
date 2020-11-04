@@ -54,6 +54,7 @@ export default Vue.extend({
 .card {
   flex-direction: row;
   padding: 15px;
-  height: 12rem;
+  height: 12.3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 </style>

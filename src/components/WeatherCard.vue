@@ -2,6 +2,8 @@
   <div class="card">
     <div class="c-status">{{ status }}</div>
     <div class="w-card">
+      <!-- <div>{{ country.timezone }}</div>
+      <div>{{ toCelcius(country.current.temp) }} °C</div> -->
       <div>{{ country.name }}</div>
       <div>{{ country.temp }} °C</div>
     </div>
@@ -15,6 +17,12 @@ export default Vue.extend({
   props: {
     status: String,
     country: Object,
+  },
+  methods: {
+    toCelcius(temp) {
+      let celcius = (temp / 10).toFixed(0);
+      return celcius;
+    },
   },
 });
 </script>
