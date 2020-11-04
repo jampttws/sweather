@@ -1,3 +1,4 @@
+
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -24,6 +25,5 @@ export default new Vuex.Store({
       commit('setCountryList', payload)
     }
   },
-  modules: {
-  }
-})
+  modules: {},
+});
