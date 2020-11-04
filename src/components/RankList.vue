@@ -1,5 +1,5 @@
 <template>
-  <div class="w-100">
+  <div class="list-container">
     <weather-card class="mb-2rem" status="Hottest" :country="country" />
     <weather-card class="mb-2rem" status="Coldest" :country="country" />
     <weather-card class="mb-2rem" status="Wettest" :country="country" />
@@ -22,8 +22,12 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.w-100 {
+.list-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .mb-2rem {
   margin-bottom: 2rem;

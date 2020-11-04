@@ -1,7 +1,7 @@
 <template>
   <div class="flex card">
-    <detail-card />
-    <div class="flex margin-l-2">
+    <detail-card class="w-55" />
+    <div class="flex">
       <daily-card />
       <daily-card class="margin-l-2" />
       <daily-card class="margin-l-2" />
@@ -26,6 +26,10 @@ export default Vue.extend({
 <style scoped>
 .flex {
   display: flex;
+}
+
+.w-55 {
+  width: 55%;
 }
 
 .margin-l-2 {
