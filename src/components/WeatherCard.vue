@@ -1,7 +1,7 @@
 <template>
-  <div class="flex card">
-    <div class="flex c-status">{{ status }}</div>
-    <div class="flex w-card">
+  <div class="card">
+    <div class="c-status">{{ status }}</div>
+    <div class="w-card">
       <div>{{ country.name }}</div>
       <div>{{ country.temp }} °C</div>
     </div>
@@ -20,11 +20,8 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.flex {
-  display: flex;
-}
-
 .card {
+  display: flex;
   padding: 10px;
   width: 80%;
   height: 6rem;
@@ -32,6 +29,7 @@ export default Vue.extend({
 }
 
 .c-status {
+  display: flex;
   height: 30%;
   align-items: flex-start;
   font-weight: 600;
@@ -39,6 +37,7 @@ export default Vue.extend({
 }
 
 .w-card {
+  display: flex;
   height: 70%;
   font-size: 24px;
   align-items: center;
