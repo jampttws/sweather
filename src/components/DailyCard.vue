@@ -1,9 +1,17 @@
 <template>
   <div class="daily-card">
     <div>
-      <div>Wed, Nov 04</div>
-      <img :src="this.imageSrc('01d')" class="weather-icon" />
-      <div class="flex temp">10/13 °C</div>
+      <div>{{ computeDate() }}</div>
+      <img
+        :src="this.imageSrc(dailyWeather.weather[0].icon)"
+        class="weather-icon"
+      />
+      <div class="flex temp">
+        {{ toCelcius(dailyWeather.temp.min) }}/{{
+          toCelcius(dailyWeather.temp.max)
+        }}
+        °C
+      </div>
     </div>
   </div>
 </template>
@@ -17,6 +25,21 @@ export default Vue.extend({
       const src = `https://openweathermap.org/img/wn/${iconId}@2x.png`;
       return src;
     },
+    computeDate() {
+      let current = new Date();
+      let newDate = new Date(current);
+      newDate.setDate(newDate.getDate() + this.id);
+      let date_array = newDate.toDateString().split(" ");
+      return `${date_array[0]}, ${date_array[2]} ${date_array[1]}`;
+    },
+    toCelcius(temp) {
+      let celcius = (temp / 10).toFixed(0);
+      return celcius;
+    },
+  },
+  props: {
+    dailyWeather: Object,
+    id: Number,
   },
 });
 </script>

@@ -1,31 +1,29 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import { getWeather } from "@/api/weather";
-import { getCity } from "@/api/map.js";
 
-Vue.use(Vuex);
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    currentWeather: {},
-    currentCity: {},
-    currenThai: {},
+    countryWeather: {},
+    countryList: []
   },
   mutations: {
-    setCurrentWeather(state, payload) {
-      state.currentWeather = payload;
+    setCountryWeather(state, payload){
+      state.countryWeather = payload
     },
-    setCurrentCityMap(state, payload) {
-      state.currentCity = payload;
-    },
+    setCountryList(state, payload){
+      state.countryList = payload
+    }
   },
   actions: {
-    async changeCurrentWeather({ commit }, payload) {
-      commit("setCurrentWeather", await getWeather(payload));
+    changeCountryWeather({commit}, payload){
+      commit('setCountryWeather', payload)
     },
-    async getCityMap({ commit }, payload) {
-      commit("setCurrentCityMap", await getCity(payload));
-    },
+    changeCountryList({commit}, payload){
+      commit('setCountryList', payload)
+    }
   },
   modules: {},
 });

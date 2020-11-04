@@ -1,11 +1,19 @@
 <template>
   <div class="flex card">
-    <detail-card class="w-55" />
-    <div class="flex">
-      <daily-card />
-      <daily-card class="margin-l-2" />
-      <daily-card class="margin-l-2" />
-      <daily-card class="margin-l-2" />
+    <detail-card
+      class="w-55"
+      :timezone="weather.timezone"
+      :currentWeather="weather.current"
+    />
+    <div class="flex daily-box">
+      <div v-for="(date, id) in weather.daily" :key="id" class="flex">
+        <daily-card
+          v-if="id !== 0"
+          class="margin-l-2"
+          :dailyWeather="date"
+          :id="id"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +28,9 @@ export default Vue.extend({
     DetailCard,
     DailyCard,
   },
+  props: {
+    weather: Object,
+  },
 });
 </script>
 
@@ -30,6 +41,11 @@ export default Vue.extend({
 
 .w-55 {
   width: 55%;
+}
+
+.daily-box {
+  width: 45%;
+  overflow-x: auto;
 }
 
 .margin-l-2 {

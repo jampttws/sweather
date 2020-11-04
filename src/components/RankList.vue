@@ -10,6 +10,7 @@
 <script>
 import Vue from "vue";
 import WeatherCard from "@/components/WeatherCard.vue";
+import { getWeather } from "@/api/weather.js";
 
 export default Vue.extend({
   components: {
@@ -17,6 +18,26 @@ export default Vue.extend({
   },
   props: {
     country: Object,
+  },
+  data() {
+    return {
+      thai: {},
+      japan: {},
+      laos: {},
+      china: {},
+      korea: {},
+      indonesia: {},
+    };
+  },
+  methods: {
+    async callWeather() {
+      this.th = await getWeather("Thailand");
+      this.jp = await getWeather("Japan");
+      this.ls = await getWeather("Laos");
+      this.ch = await getWeather("China");
+      this.kr = await getWeather("SouthKorea");
+      this.id = await getWeather("Indonesia");
+    },
   },
 });
 </script>
