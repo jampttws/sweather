@@ -1,16 +1,32 @@
 <template>
   <div class="flex card">
-    <div></div>
+    <detail-card />
+    <div>
+      <daily-card />
+    </div>
   </div>
 </template>
+
+<script>
+import Vue from "vue";
+import DetailCard from "@/components/DetailCard.vue";
+import DailyCard from "@/components/DailyCard.vue";
+
+export default Vue.extend({
+  components: {
+    DetailCard,
+    DailyCard,
+  },
+});
+</script>
 
 <style scoped>
 .flex {
   display: flex;
-  flex-direction: column;
 }
 
 .card {
+  flex-direction: row;
   padding: 15px;
   height: 12rem;
 }

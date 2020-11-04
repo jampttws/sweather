@@ -8,7 +8,6 @@
         <rank-list :country="country" />
       </div>
     </div>
-    <detail-card />
     <weather-details />
   </div>
 </template>
@@ -18,14 +17,12 @@ import Vue from "vue";
 
 import RankList from "@/components/RankList.vue";
 import WeatherDetails from "@/components/WeatherDetails.vue";
-import DetailCard from "@/components/DetailCard.vue";
 import WorldWeather from "@/components/World-weather.vue";
 
 export default Vue.extend({
   components: {
     RankList,
     WeatherDetails,
-    DetailCard,
     WorldWeather,
   },
   data() {
@@ -61,7 +58,7 @@ export default Vue.extend({
 }
 
 .map {
-  height: 30rem;
+  /* height: 30rem; */
   width: 72%;
 }
 </style>
