@@ -1,8 +1,11 @@
 <template>
   <div class="flex card">
     <detail-card />
-    <div>
+    <div class="flex margin-l-2">
       <daily-card />
+      <daily-card class="margin-l-2" />
+      <daily-card class="margin-l-2" />
+      <daily-card class="margin-l-2" />
     </div>
   </div>
 </template>
@@ -25,6 +28,9 @@ export default Vue.extend({
   display: flex;
 }
 
+.margin-l-2 {
+  margin-left: 0.5rem;
+}
 .card {
   flex-direction: row;
   padding: 15px;

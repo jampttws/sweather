@@ -1,6 +1,7 @@
 <template>
   <div class="daily-card">
     <div>
+      <div>Wed, Nov 04</div>
       <img :src="this.imageSrc('01d')" class="weather-icon" />
       <div class="flex temp">10/13 °C</div>
     </div>
@@ -32,7 +33,7 @@ export default Vue.extend({
 }
 
 .temp {
-  font-size: 26px;
+  font-size: 24px;
   /* height: 60%; */
   align-items: flex-end;
 }

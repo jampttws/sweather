@@ -20,21 +20,21 @@
     </div>
     <div class="flex flex-col margin-l-2">
       <div class="flex icon-detail">
-        <font-awesome-icon class="icon-xl mb-2px" :icon="['fa', 'umbrella']" />
+        <font-awesome-icon class="icon-xl mb-10px" :icon="['fa', 'umbrella']" />
         <div>35%</div>
       </div>
       <div class="flex icon-detail">
-        <font-awesome-icon class="icon-xl mb-2px" :icon="['fa', 'tint']" />
+        <font-awesome-icon class="icon-xl mb-10px" :icon="['fa', 'tint']" />
         <div>77%</div>
       </div>
     </div>
     <div class="flex flex-col margin-l-2 detail">
       <div class="flex icon-detail">
-        <font-awesome-icon class="icon-xl mb-2px" :icon="['fa', 'compass']" />
+        <font-awesome-icon class="icon-xl mb-10px" :icon="['fa', 'compass']" />
         <div>1012 hPa</div>
       </div>
       <div class="flex icon-detail">
-        <font-awesome-icon class="icon-xl mb-2px" :icon="['fa', 'wind']" />
+        <font-awesome-icon class="icon-xl mb-10px" :icon="['fa', 'wind']" />
         <div>1.93 m/s</div>
       </div>
     </div>
@@ -70,7 +70,7 @@ export default Vue.extend({
 
 .d-card {
   flex-direction: row;
-  /* height: 10rem; */
+  height: 10rem;
   width: 45rem;
 }
 
@@ -85,7 +85,7 @@ export default Vue.extend({
   margin-left: 2rem;
 }
 
-.mb-2px {
+.mb-10px {
   margin-bottom: 10px;
 }
 
@@ -100,7 +100,7 @@ export default Vue.extend({
 }
 
 .temp {
-  font-size: 50px;
+  font-size: 48px;
   height: 60%;
   align-items: flex-end;
 }
